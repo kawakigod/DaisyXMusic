@@ -22,7 +22,7 @@ class Messages:
     HELP_MSG = [
         ".",
         f"""
-**Hey 👋 Welcome back to {PROJECT_NAME}
+**Hey 👋 Welcome to {PROJECT_NAME} help
 
 ⚪️ {PROJECT_NAME} can play music in your group's voice chat as well as channel voice chats
 
@@ -51,7 +51,8 @@ class Messages:
 - /play [reply yo audio]: Play replied audio
 - /splay: Play song via jio saavn
 - /ytplay: Directly play song via Youtube Music
-
+""",
+        f"""
 **=>> Playback ⏯**
 
 - /player: Open Settings menu of player
@@ -109,7 +110,8 @@ channel is also can be used instead of c ( /cplay = /channelplay )
 - /song [song name]: Download audio song from youtube
 - /saavn [song name]: Download song from saavn
 - /deezer [song name]: Download song from deezer
-
+""",
+        f"""
 **=>> Search Tools 📄**
 
 - /search [song name]: Search youtube for songs
