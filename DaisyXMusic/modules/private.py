@@ -31,7 +31,7 @@ from DaisyXMusic.modules.msg import Messages as tr
 logging.basicConfig(level=logging.INFO)
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(["start"]))
+@Client.on_message(filters.private & filters.incoming & filters.command(["playerstart"]))
 def _start(client, message):
     client.send_message(
         message.chat.id,
@@ -53,7 +53,7 @@ def _start(client, message):
     )
 
 
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("playerstart") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
         f"""**🔴 {PROJECT_NAME} is online**""",
@@ -61,7 +61,7 @@ async def gstart(_, message: Message):
     )
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(["help"]))
+@Client.on_message(filters.private & filters.incoming & filters.command(["playerhelp"]))
 def _help(client, message):
     client.send_message(
         chat_id=message.chat.id,
@@ -120,7 +120,7 @@ def map(pos):
     return button
 
 
-@Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("playerhelp") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
         f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
